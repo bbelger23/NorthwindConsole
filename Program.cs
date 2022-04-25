@@ -96,11 +96,14 @@ namespace NorthwindConsole
                         Console.Clear();
                         logger.Info($"CategoryId {id} selected");
                         Category category = db.Categories.Include("Products").FirstOrDefault(c => c.CategoryId == id);
+                        Console.ForegroundColor = ConsoleColor.Magenta;
                         Console.WriteLine($"{category.CategoryName} - {category.Description}");
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
                         foreach (Product p in category.Products)
                         {
                             Console.WriteLine(p.ProductName);
                         }
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                     else if (choice == "4")
                     {
@@ -108,14 +111,17 @@ namespace NorthwindConsole
                         var query = db.Categories.Include("Products").OrderBy(p => p.CategoryId);
                         foreach (var item in query)
                         {
+                            Console.ForegroundColor = ConsoleColor.Magenta;
                             Console.WriteLine($"{item.CategoryName}");
                             foreach (Product p in item.Products)
                             {
+                                Console.ForegroundColor = ConsoleColor.DarkRed;
                                 Console.WriteLine($"\t{p.ProductName}");
                             }
                         }
                     }
                     Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.White;
 
                 } while (choice.ToLower() != "q");
             }
