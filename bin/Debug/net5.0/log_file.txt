@@ -1,0 +1,29 @@
+2022-04-17 19:08:18.8569|INFO|NorthwindConsole.Program|Program started
+2022-04-17 19:08:18.8814|INFO|NorthwindConsole.Program|Program ended
+2022-04-17 20:11:50.8197|INFO|NorthwindConsole.Program|Program started
+2022-04-17 20:11:51.9303|INFO|NorthwindConsole.Program|Option 1 selected
+2022-04-17 20:11:52.4616|ERROR|NorthwindConsole.Program|Value cannot be null. (Parameter 'connectionString')
+2022-04-17 20:11:52.4616|INFO|NorthwindConsole.Program|Program ended
+2022-04-17 20:13:24.6703|INFO|NorthwindConsole.Program|Program started
+2022-04-17 20:13:25.8390|INFO|NorthwindConsole.Program|Option 1 selected
+2022-04-17 20:38:46.5488|INFO|NorthwindConsole.Program|Option q selected
+2022-04-17 20:38:46.5500|INFO|NorthwindConsole.Program|Program ended
+2022-04-17 20:38:52.6544|INFO|NorthwindConsole.Program|Program started
+2022-04-17 20:38:53.7293|INFO|NorthwindConsole.Program|Option 3 selected
+2022-04-17 20:38:59.9173|INFO|NorthwindConsole.Program|CategoryId 6 selected
+2022-04-17 20:39:03.0552|INFO|NorthwindConsole.Program|Option q selected
+2022-04-17 20:39:03.0552|INFO|NorthwindConsole.Program|Program ended
+2022-04-17 20:58:21.9988|INFO|NorthwindConsole.Program|Program started
+2022-04-17 20:58:22.8658|INFO|NorthwindConsole.Program|Option 3 selected
+2022-04-17 20:58:25.1342|INFO|NorthwindConsole.Program|CategoryId 1 selected
+2022-04-17 20:58:51.0238|INFO|NorthwindConsole.Program|Option q selected
+2022-04-17 20:58:51.0238|INFO|NorthwindConsole.Program|Program ended
+2022-04-17 20:59:00.2148|INFO|NorthwindConsole.Program|Program started
+2022-04-17 20:59:02.2891|INFO|NorthwindConsole.Program|Option 3 selected
+2022-04-17 20:59:04.7615|INFO|NorthwindConsole.Program|CategoryId 1 selected
+2022-04-17 20:59:10.3439|INFO|NorthwindConsole.Program|Option q selected
+2022-04-17 20:59:10.3439|INFO|NorthwindConsole.Program|Program ended
+2022-04-17 21:01:53.2730|INFO|NorthwindConsole.Program|Program started
+2022-04-17 21:01:54.2540|INFO|NorthwindConsole.Program|Option 4 selected
+2022-04-17 21:02:10.7621|INFO|NorthwindConsole.Program|Option q selected
+2022-04-17 21:02:10.7621|INFO|NorthwindConsole.Program|Program ended
