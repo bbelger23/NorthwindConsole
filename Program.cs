@@ -55,40 +55,12 @@ namespace NorthwindConsole
                     else if (choice == "2")
                     {
                         //Adds a category to the database
-                        Category category = new Category();
-                        Console.WriteLine("Enter Category Name:");
-                        category.CategoryName = Console.ReadLine();
-                        Console.WriteLine("Enter the Category Description:");
-                        category.Description = Console.ReadLine();
+                        Category category = InputCategory(db);
                         
-                        ValidationContext context = new ValidationContext(category, null, null);
-                        List<ValidationResult> results = new List<ValidationResult>();
-
-                        var isValid = Validator.TryValidateObject(category, context, results, true);
-                        if (isValid)
-                        {
-                            // check for unique name
-                            if (db.Categories.Any(c => c.CategoryName == category.CategoryName))
-                            {
-                                // generate validation error
-                                isValid = false;
-                                results.Add(new ValidationResult("Name exists", new string[] { "CategoryName" }));
-                            }
-                            else
-                            {
-                                logger.Info("Validation passed");
-                                db.Categories.Add(category);
-                                db.SaveChanges();
-
-                                logger.Info("Category added - {name}", category.CategoryName);
-                            }
-                        }
-                        if (!isValid)
-                        {
-                            foreach (var result in results)
-                            {
-                                logger.Error($"{result.MemberNames.First()} : {result.ErrorMessage}");
-                            }
+                        if (category != null) {
+                            db.Categories.Add(category);
+                            db.SaveChanges();
+                            logger.Info("Category added - {name}", category.CategoryName);
                         }
                     }
                     else if (choice == "3")
@@ -268,6 +240,44 @@ namespace NorthwindConsole
                 return null;
             }
             return product;
+        }
+
+        public static Category InputCategory(NWConsole_48_BMBContext db)
+        {
+            Category category = new Category();
+            Console.WriteLine("Enter Category Name:");
+            category.CategoryName = Console.ReadLine();
+            Console.WriteLine("Enter the Category Description:");
+            category.Description = Console.ReadLine();
+                        
+            ValidationContext context = new ValidationContext(category, null, null);
+            List<ValidationResult> results = new List<ValidationResult>();
+
+            var isValid = Validator.TryValidateObject(category, context, results, true);
+            if (isValid)
+            {
+                // check for unique name
+                if (db.Categories.Any(c => c.CategoryName == category.CategoryName))
+                {
+                    // generate validation error
+                    isValid = false;
+                    results.Add(new ValidationResult("Name exists", new string[] { "CategoryName" }));
+                }
+                else
+                {
+                    logger.Info("Validation passed");
+                                
+                }
+            }
+            if (!isValid)
+            {
+                foreach (var result in results)
+                {
+                    logger.Error($"{result.MemberNames.First()} : {result.ErrorMessage}");
+                }
+                return null;
+            }
+            return category;
         }
     }
 }
