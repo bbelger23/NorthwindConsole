@@ -164,3 +164,25 @@
 2022-05-06 13:46:38.2457|INFO|NorthwindConsole.Program|ProductId 56 selected
 2022-05-06 13:47:07.1783|INFO|NorthwindConsole.Program|Option q selected
 2022-05-06 13:47:07.1945|INFO|NorthwindConsole.Program|Program ended
+2022-05-06 14:27:54.9841|INFO|NorthwindConsole.Program|Program started
+2022-05-06 14:27:58.4314|INFO|NorthwindConsole.Program|Option 11 selected
+2022-05-06 14:28:04.1630|INFO|NorthwindConsole.Program|Blog (id: 78) deleted
+2022-05-06 14:28:10.2354|INFO|NorthwindConsole.Program|Option 9 selected
+2022-05-06 14:28:20.1540|INFO|NorthwindConsole.Program|Option 3 selected
+2022-05-06 14:28:29.6963|INFO|NorthwindConsole.Program|Option q selected
+2022-05-06 14:28:30.2659|INFO|NorthwindConsole.Program|Option q selected
+2022-05-06 14:28:30.2659|INFO|NorthwindConsole.Program|Program ended
+2022-05-06 14:29:38.9541|INFO|NorthwindConsole.Program|Program started
+2022-05-06 14:29:42.5772|INFO|NorthwindConsole.Program|Option 9 selected
+2022-05-06 14:29:45.0110|INFO|NorthwindConsole.Program|Option 3 selected
+2022-05-06 14:29:50.2843|INFO|NorthwindConsole.Program|Option q selected
+2022-05-06 14:29:53.6330|INFO|NorthwindConsole.Program|Option 6 selected
+2022-05-06 14:29:57.1975|INFO|NorthwindConsole.Program|Blog (id: 9) deleted
+2022-05-06 14:30:13.4107|INFO|NorthwindConsole.Program|Option 1 selected
+2022-05-06 14:30:20.0723|INFO|NorthwindConsole.Program|Option q selected
+2022-05-06 14:30:20.0723|INFO|NorthwindConsole.Program|Program ended
+2022-05-06 14:30:55.5405|INFO|NorthwindConsole.Program|Program started
+2022-05-06 14:31:06.0607|INFO|NorthwindConsole.Program|Option 4 selected
+2022-05-06 14:31:09.4582|INFO|NorthwindConsole.Program|CategoryId 1 selected
+2022-05-06 14:31:20.0519|INFO|NorthwindConsole.Program|Option q selected
+2022-05-06 14:31:20.0519|INFO|NorthwindConsole.Program|Program ended

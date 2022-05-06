@@ -59,6 +59,18 @@ namespace NorthwindConsole.Model
             this.SaveChanges();
         }
 
+        public void DeleteCategory(Category category)
+        {
+            this.Categories.Remove(category);
+            this.SaveChanges();
+        }
+
+        public void DeleteProduct(Product product)
+        {
+            this.Products.Remove(product);
+            this.SaveChanges();
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)

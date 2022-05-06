@@ -30,10 +30,12 @@ namespace NorthwindConsole
                     Console.WriteLine("3) Edit Category");
                     Console.WriteLine("4) Display Category and related products");
                     Console.WriteLine("5) Display all Categories and their related products");
-                    Console.WriteLine("6) Add Product");
-                    Console.WriteLine("7) Edit Product");
-                    Console.WriteLine("8) Display all Products (active, discontinued, or both)");
-                    Console.WriteLine("9) Display Product");
+                    Console.WriteLine("6) Delete a Category");
+                    Console.WriteLine("7) Add Product");
+                    Console.WriteLine("8) Edit Product");
+                    Console.WriteLine("9) Display all Products (active, discontinued, or both)");
+                    Console.WriteLine("10) Display Product");
+                    Console.WriteLine("11) Delete a Product");
                     Console.WriteLine("\"q\" to quit");
                     choice = Console.ReadLine();
                     Console.Clear();
@@ -128,6 +130,18 @@ namespace NorthwindConsole
                     }
                     else if (choice == "6")
                     {
+                        // delete category
+                        Console.WriteLine("Choose the category to delete:");
+                         var category = GetCategory(db);
+                        if (category != null)
+                        {
+                            // delete category
+                            db.DeleteCategory(category);
+                            logger.Info($"Blog (id: {category.CategoryId}) deleted");
+                        }
+                    }
+                    else if (choice == "7")
+                    {
                         //Adds a product to the database
                         Product product = InputProduct(db);
                         if (product != null) {
@@ -135,7 +149,7 @@ namespace NorthwindConsole
                             logger.Info("Product added - {name}", product.ProductName);
                         }
                     }
-                    else if (choice == "7") 
+                    else if (choice == "8") 
                     {
                         //Edits a product in the database
                         Console.WriteLine("Choose a Product to edit");
@@ -152,7 +166,7 @@ namespace NorthwindConsole
                         }
 
                     }
-                    else if (choice == "8")
+                    else if (choice == "9")
                     {
                         //Displays product from the database per the users choice
                         string option;
@@ -174,7 +188,7 @@ namespace NorthwindConsole
                             
                                 foreach (var item in query) {
                                     Console.ForegroundColor = ConsoleColor.Magenta;
-                                    Console.WriteLine($"{item.ProductName}");
+                                    Console.WriteLine($"{item.ProductId}: {item.ProductName}");
                                 }
                                 Console.ForegroundColor = ConsoleColor.White;
                                 Console.WriteLine();
@@ -187,7 +201,7 @@ namespace NorthwindConsole
                             
                                     foreach (var item in query) {
                                     Console.ForegroundColor = ConsoleColor.Magenta;
-                                    Console.WriteLine($"{item.ProductName}");
+                                    Console.WriteLine($"{item.ProductId}: {item.ProductName}");
                                 }
                                 Console.ForegroundColor = ConsoleColor.White;
                                 Console.WriteLine();
@@ -199,7 +213,7 @@ namespace NorthwindConsole
                                 foreach (var item in query)
                             {
                                 Console.ForegroundColor = ConsoleColor.Magenta;
-                                Console.WriteLine($"{item.ProductName}");
+                                Console.WriteLine($"{item.ProductId}: {item.ProductName}");
                             }
                             Console.ForegroundColor = ConsoleColor.White;
                             Console.WriteLine();
@@ -207,7 +221,7 @@ namespace NorthwindConsole
                         } while (option.ToLower() != "q");
                         
                     }
-                    else if (choice == "9")
+                    else if (choice == "10")
                     {
                         //Displays a product
                         var query = db.Products.OrderBy(p => p.ProductId);
@@ -226,6 +240,18 @@ namespace NorthwindConsole
                         Console.ForegroundColor = ConsoleColor.Magenta;
                         Console.WriteLine($"Product Id: {product.ProductId} \n Product Name: {product.ProductName} \n Supplier Id: {product.SupplierId} \n Category Id: {product.CategoryId} \n Quantity per Unit: {product.QuantityPerUnit} \n Unit Price: {product.UnitPrice:C2} \n Units in Stock: {product.UnitsInStock} \n Units on Order: {product.UnitsOnOrder} \n Reorder Level: {product.ReorderLevel} \n Discontinued: {product.Discontinued}");
                         Console.ForegroundColor = ConsoleColor.White;
+                    }
+                    else if (choice == "11")
+                    {
+                        // delete product
+                        Console.WriteLine("Choose the Product to delete:");
+                         var product = GetProduct(db);
+                        if (product != null)
+                        {
+                            // delete product
+                            db.DeleteProduct(product);
+                            logger.Info($"Blog (id: {product.ProductId}) deleted");
+                        }
                     }
                 } while (choice.ToLower() != "q");
             }
