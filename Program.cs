@@ -27,12 +27,13 @@ namespace NorthwindConsole
                     // ask user for choice 
                     Console.WriteLine("1) Display Categories");
                     Console.WriteLine("2) Add Category");
-                    Console.WriteLine("3) Display Category and related products");
-                    Console.WriteLine("4) Display all Categories and their related products");
-                    Console.WriteLine("5) Add Product");
-                    Console.WriteLine("6) Edit Product");
-                    Console.WriteLine("7) Display all Products (active, discontinued, or both)");
-                    Console.WriteLine("8) Display Product");
+                    Console.WriteLine("3) Edit Category");
+                    Console.WriteLine("4) Display Category and related products");
+                    Console.WriteLine("5) Display all Categories and their related products");
+                    Console.WriteLine("6) Add Product");
+                    Console.WriteLine("7) Edit Product");
+                    Console.WriteLine("8) Display all Products (active, discontinued, or both)");
+                    Console.WriteLine("9) Display Product");
                     Console.WriteLine("\"q\" to quit");
                     choice = Console.ReadLine();
                     Console.Clear();
@@ -65,6 +66,23 @@ namespace NorthwindConsole
                     }
                     else if (choice == "3")
                     {
+                        // Edit a category in the database
+                        Console.WriteLine("Choose the Category to edit:");
+                        var category = GetCategory(db);
+                        if (category != null)
+                        {
+                            // input blog
+                            Category UpdatedCategory = InputCategory(db);
+                            if (UpdatedCategory != null)
+                            {
+                                UpdatedCategory.CategoryId = category.CategoryId;
+                                db.EditCategory(UpdatedCategory);
+                                logger.Info($"Category (id: {category.CategoryId}) updated");
+                            }
+                        }
+                    }
+                    else if (choice == "4")
+                    {
                         //Displays a category and all related products
                         var query = db.Categories.OrderBy(p => p.CategoryId);
 
@@ -88,7 +106,7 @@ namespace NorthwindConsole
                         }
                         Console.ForegroundColor = ConsoleColor.White;
                     }
-                    else if (choice == "4")
+                    else if (choice == "5")
                     {
                         //Displays all categories and their products
                         var query = db.Categories.Include("Products").OrderBy(p => p.CategoryId);
@@ -98,14 +116,17 @@ namespace NorthwindConsole
                             Console.WriteLine($"{item.CategoryName}");
                             foreach (Product p in item.Products)
                             {
-                                Console.ForegroundColor = ConsoleColor.DarkRed;
-                                Console.WriteLine($"\t{p.ProductName}");
+                                if (p.Discontinued == false) 
+                                {
+                                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                                    Console.WriteLine($"\t{p.ProductName}");
+                                }
                             }
                         }
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.WriteLine();
                     }
-                    else if (choice == "5")
+                    else if (choice == "6")
                     {
                         //Adds a product to the database
                         Product product = InputProduct(db);
@@ -114,7 +135,7 @@ namespace NorthwindConsole
                             logger.Info("Product added - {name}", product.ProductName);
                         }
                     }
-                    else if (choice == "6") 
+                    else if (choice == "7") 
                     {
                         //Edits a product in the database
                         Console.WriteLine("Choose a Product to edit");
@@ -131,7 +152,7 @@ namespace NorthwindConsole
                         }
 
                     }
-                    else if (choice == "7")
+                    else if (choice == "8")
                     {
                         //Displays product from the database per the users choice
                         string option;
@@ -186,7 +207,7 @@ namespace NorthwindConsole
                         } while (option.ToLower() != "q");
                         
                     }
-                    else if (choice == "8")
+                    else if (choice == "9")
                     {
                         //Displays a product
                         var query = db.Products.OrderBy(p => p.ProductId);
@@ -320,6 +341,24 @@ namespace NorthwindConsole
                 }
             }
             logger.Error("Invalid Product Id");
+            return null;
+        }
+
+        public static Category GetCategory(NWConsole_48_BMBContext db) {
+            var categories = db.Categories.OrderBy(c => c.CategoryId);
+            foreach (Category c in categories)
+            {
+                Console.WriteLine($"{c.CategoryId}: {c.CategoryName}");
+            }
+            if (int.TryParse(Console.ReadLine(), out int CategoryId))
+            {
+                Category category = db.Categories.FirstOrDefault(c => c.CategoryId == CategoryId);
+                if (category != null)
+                {
+                    return category;
+                }
+            }
+            logger.Error("Invalid Category Id");
             return null;
         }
     }
