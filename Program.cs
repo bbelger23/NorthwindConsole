@@ -189,9 +189,23 @@ namespace NorthwindConsole
                     else if (choice == "8")
                     {
                         //Displays a product
+                        var query = db.Products.OrderBy(p => p.ProductId);
 
+                        Console.WriteLine("Select the Product you want to display:");
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
+                        foreach (var item in query)
+                        {
+                            Console.WriteLine($"{item.ProductId}) {item.ProductName}");
+                        }
+                        Console.ForegroundColor = ConsoleColor.White;
+                        int id = int.Parse(Console.ReadLine());
+                        Console.Clear();
+                        logger.Info($"ProductId {id} selected");
+                        Product product = db.Products.FirstOrDefault(p => p.ProductId == id);
+                        Console.ForegroundColor = ConsoleColor.Magenta;
+                        Console.WriteLine($"Product Id: {product.ProductId} \n Product Name: {product.ProductName} \n Supplier Id: {product.SupplierId} \n Category Id: {product.CategoryId} \n Quantity per Unit: {product.QuantityPerUnit} \n Unit Price: {product.UnitPrice:C2} \n Units in Stock: {product.UnitsInStock} \n Units on Order: {product.UnitsOnOrder} \n Reorder Level: {product.ReorderLevel} \n Discontinued: {product.Discontinued}");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
-
                 } while (choice.ToLower() != "q");
             }
             catch (Exception ex)

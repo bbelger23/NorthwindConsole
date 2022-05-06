@@ -132,3 +132,35 @@
 2022-05-06 12:04:01.1590|INFO|NorthwindConsole.Program|Category added - "Meat"
 2022-05-06 12:05:09.6920|INFO|NorthwindConsole.Program|Option q selected
 2022-05-06 12:05:09.7080|INFO|NorthwindConsole.Program|Program ended
+2022-05-06 13:29:28.5346|INFO|NorthwindConsole.Program|Program started
+2022-05-06 13:29:29.6795|INFO|NorthwindConsole.Program|Option  selected
+2022-05-06 13:29:53.7890|INFO|NorthwindConsole.Program|Option q selected
+2022-05-06 13:29:53.7890|INFO|NorthwindConsole.Program|Program ended
+2022-05-06 13:30:01.7574|INFO|NorthwindConsole.Program|Program started
+2022-05-06 13:30:07.3487|INFO|NorthwindConsole.Program|Option q selected
+2022-05-06 13:30:07.3632|INFO|NorthwindConsole.Program|Program ended
+2022-05-06 13:30:26.4283|INFO|NorthwindConsole.Program|Program started
+2022-05-06 13:30:28.4347|INFO|NorthwindConsole.Program|Option 8 selected
+2022-05-06 13:30:39.7579|INFO|NorthwindConsole.Program|ProductId 45 selected
+2022-05-06 13:31:44.4234|INFO|NorthwindConsole.Program|Option q selected
+2022-05-06 13:31:44.4267|INFO|NorthwindConsole.Program|Program ended
+2022-05-06 13:31:53.3795|INFO|NorthwindConsole.Program|Program started
+2022-05-06 13:31:54.9311|INFO|NorthwindConsole.Program|Option 8 selected
+2022-05-06 13:31:58.9468|INFO|NorthwindConsole.Program|ProductId 46 selected
+2022-05-06 13:32:25.0678|INFO|NorthwindConsole.Program|Option q selected
+2022-05-06 13:32:25.0678|INFO|NorthwindConsole.Program|Program ended
+2022-05-06 13:32:34.1186|INFO|NorthwindConsole.Program|Program started
+2022-05-06 13:32:35.4242|INFO|NorthwindConsole.Program|Option 8 selected
+2022-05-06 13:32:38.3654|INFO|NorthwindConsole.Program|ProductId 8 selected
+2022-05-06 13:33:18.0161|INFO|NorthwindConsole.Program|Option q selected
+2022-05-06 13:33:18.0161|INFO|NorthwindConsole.Program|Program ended
+2022-05-06 13:33:23.5262|INFO|NorthwindConsole.Program|Program started
+2022-05-06 13:33:24.8192|INFO|NorthwindConsole.Program|Option 8 selected
+2022-05-06 13:33:27.1756|INFO|NorthwindConsole.Program|ProductId 5 selected
+2022-05-06 13:34:11.9550|INFO|NorthwindConsole.Program|Option q selected
+2022-05-06 13:34:11.9550|INFO|NorthwindConsole.Program|Program ended
+2022-05-06 13:46:31.8614|INFO|NorthwindConsole.Program|Program started
+2022-05-06 13:46:33.7122|INFO|NorthwindConsole.Program|Option 8 selected
+2022-05-06 13:46:38.2457|INFO|NorthwindConsole.Program|ProductId 56 selected
+2022-05-06 13:47:07.1783|INFO|NorthwindConsole.Program|Option q selected
+2022-05-06 13:47:07.1945|INFO|NorthwindConsole.Program|Program ended
