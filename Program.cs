@@ -110,14 +110,25 @@ namespace NorthwindConsole
                         //Adds a product to the database
                         Product product = InputProduct(db);
                         if (product != null) {
-                            db.Products.Add(product);
-                            db.SaveChanges();
+                            db.AddProduct(product);
                             logger.Info("Product added - {name}", product.ProductName);
                         }
                     }
                     else if (choice == "6") 
                     {
                         //Edits a product in the database
+                        Console.WriteLine("Choose a Product to edit");
+                        var product = GetProduct(db);
+                        if (product !=null) 
+                        {
+                            Product updatedProduct = InputProduct(db);
+                            if (updatedProduct != null) 
+                            {
+                                updatedProduct.ProductId = product.ProductId;
+                                db.EditProduct(updatedProduct);
+                                logger.Info($"Product (id: {product.ProductId}) updated");
+                            }
+                        }
 
                     }
                     else if (choice == "7")
@@ -278,6 +289,24 @@ namespace NorthwindConsole
                 return null;
             }
             return category;
+        }
+
+        public static Product GetProduct(NWConsole_48_BMBContext db) {
+            var products = db.Products.OrderBy(P => P.ProductId);
+            foreach (Product p in products)
+            {
+                Console.WriteLine($"{p.ProductId}: {p.ProductName}");
+            }
+            if (int.TryParse(Console.ReadLine(), out int ProductId))
+            {
+                Product product = db.Products.FirstOrDefault(p => p.ProductId == ProductId);
+                if (product != null)
+                {
+                    return product;
+                }
+            }
+            logger.Error("Invalid Product Id");
+            return null;
         }
     }
 }

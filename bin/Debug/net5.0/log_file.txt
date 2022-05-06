@@ -126,3 +126,9 @@
 2022-05-06 10:42:17.6407|INFO|NorthwindConsole.Program|Product added - "Espresso"
 2022-05-06 12:00:47.8849|INFO|NorthwindConsole.Program|Option q selected
 2022-05-06 12:00:47.8849|INFO|NorthwindConsole.Program|Program ended
+2022-05-06 12:03:27.6508|INFO|NorthwindConsole.Program|Program started
+2022-05-06 12:03:29.8433|INFO|NorthwindConsole.Program|Option 2 selected
+2022-05-06 12:04:00.7480|INFO|NorthwindConsole.Program|Validation passed
+2022-05-06 12:04:01.1590|INFO|NorthwindConsole.Program|Category added - "Meat"
+2022-05-06 12:05:09.6920|INFO|NorthwindConsole.Program|Option q selected
+2022-05-06 12:05:09.7080|INFO|NorthwindConsole.Program|Program ended
