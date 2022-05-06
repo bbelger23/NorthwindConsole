@@ -68,3 +68,23 @@
 2022-04-25 13:03:59.0747|INFO|NorthwindConsole.Program|Option 4 selected
 2022-04-25 13:04:11.3051|INFO|NorthwindConsole.Program|Option q selected
 2022-04-25 13:04:11.3073|INFO|NorthwindConsole.Program|Program ended
+2022-04-25 13:25:53.9864|INFO|NorthwindConsole.Program|Program started
+2022-04-25 13:25:57.3449|INFO|NorthwindConsole.Program|Option 7 selected
+2022-04-25 13:27:00.8128|INFO|NorthwindConsole.Program|Option q selected
+2022-04-25 13:27:00.8128|INFO|NorthwindConsole.Program|Program ended
+2022-04-25 13:27:07.2351|INFO|NorthwindConsole.Program|Program started
+2022-04-25 13:27:07.9139|INFO|NorthwindConsole.Program|Option 7 selected
+2022-04-25 13:28:02.2623|INFO|NorthwindConsole.Program|Option q selected
+2022-04-25 13:28:02.2623|INFO|NorthwindConsole.Program|Program ended
+2022-04-25 13:28:09.0990|INFO|NorthwindConsole.Program|Program started
+2022-04-25 13:28:09.8200|INFO|NorthwindConsole.Program|Option 7 selected
+2022-04-25 13:28:19.7320|INFO|NorthwindConsole.Program|Option q selected
+2022-04-25 13:28:19.7320|INFO|NorthwindConsole.Program|Program ended
+2022-05-02 19:51:41.7074|INFO|NorthwindConsole.Program|Program started
+2022-05-02 19:51:45.0846|INFO|NorthwindConsole.Program|Option 7 selected
+2022-05-02 19:52:23.9586|INFO|NorthwindConsole.Program|Option q selected
+2022-05-02 19:52:23.9586|INFO|NorthwindConsole.Program|Program ended
+2022-05-02 20:12:28.9017|INFO|NorthwindConsole.Program|Program started
+2022-05-02 20:12:31.7474|INFO|NorthwindConsole.Program|Option 7 selected
+2022-05-02 20:15:49.7899|INFO|NorthwindConsole.Program|Option q selected
+2022-05-02 20:15:49.7899|INFO|NorthwindConsole.Program|Program ended
