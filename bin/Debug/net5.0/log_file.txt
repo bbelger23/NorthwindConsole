@@ -186,3 +186,27 @@
 2022-05-06 14:31:09.4582|INFO|NorthwindConsole.Program|CategoryId 1 selected
 2022-05-06 14:31:20.0519|INFO|NorthwindConsole.Program|Option q selected
 2022-05-06 14:31:20.0519|INFO|NorthwindConsole.Program|Program ended
+2022-05-08 20:21:29.4322|INFO|NorthwindConsole.Program|Program started
+2022-05-08 20:21:32.4338|INFO|NorthwindConsole.Program|Option 7 selected
+2022-05-08 20:22:39.1593|INFO|NorthwindConsole.Program|Validation passed
+2022-05-08 20:22:39.6681|INFO|NorthwindConsole.Program|Product added - "Ice Cream"
+2022-05-08 20:22:46.5129|INFO|NorthwindConsole.Program|Option 8 selected
+2022-05-08 20:22:51.8294|ERROR|NorthwindConsole.Program|Input string was not in a correct format.
+2022-05-08 20:22:51.8294|INFO|NorthwindConsole.Program|Program ended
+2022-05-08 20:23:06.7082|INFO|NorthwindConsole.Program|Program started
+2022-05-08 20:23:11.0455|INFO|NorthwindConsole.Program|Option 8 selected
+2022-05-08 20:23:38.2731|INFO|NorthwindConsole.Program|Validation passed
+2022-05-08 20:23:38.6264|INFO|NorthwindConsole.Program|Product (id: 79) updated
+2022-05-08 20:23:46.5307|INFO|NorthwindConsole.Program|Option 10 selected
+2022-05-08 20:23:48.5116|INFO|NorthwindConsole.Program|ProductId 79 selected
+2022-05-08 20:24:05.3363|INFO|NorthwindConsole.Program|Option 11 selected
+2022-05-08 20:24:07.0387|INFO|NorthwindConsole.Program|Blog (id: 79) deleted
+2022-05-08 20:24:18.7681|INFO|NorthwindConsole.Program|Option 9 selected
+2022-05-08 20:24:20.3925|INFO|NorthwindConsole.Program|Option 3 selected
+2022-05-08 20:25:54.4379|INFO|NorthwindConsole.Program|Option q selected
+2022-05-08 20:25:55.7642|INFO|NorthwindConsole.Program|Option q selected
+2022-05-08 20:25:55.7642|INFO|NorthwindConsole.Program|Program ended
+2022-05-08 20:30:54.7437|INFO|NorthwindConsole.Program|Program started
+2022-05-08 20:31:01.5640|INFO|NorthwindConsole.Program|Option 5 selected
+2022-05-08 20:31:56.4608|INFO|NorthwindConsole.Program|Option q selected
+2022-05-08 20:31:56.4608|INFO|NorthwindConsole.Program|Program ended
